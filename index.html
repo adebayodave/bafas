@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2TOCSOLUTIONS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Background with sliding images */
+        .background {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .background-images {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300%;
+            height: 100%;
+            display: flex;
+            animation: slideImages 15s infinite linear;
+        }
+
+        .background-images img {
+            width: 33.33%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slideImages {
+            0% {
+                transform: translateX(0);
+            }
+
+            33.33% {
+                transform: translateX(-33.33%);
+            }
+
+            66.66% {
+                transform: translateX(-66.66%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .logo {
+            width: 400px;
+            height: 400px;
+            background: url('res/bafas-logo.jpg') no-repeat center;
+            background-size: contain;
+            animation: rotateSideways 5s linear infinite;
+            z-index: 2;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            background: white;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            animation: rotateSideways 5s linear infinite;
+        }
+
+        @keyframes rotateSideways {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        /* Style for the h1 and p tags (appearing below logo) */
+        .intro-text {
+            text-align: center;
+            color: white;
+            z-index: 1;
+            position: relative;
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.05); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .intro-text h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .intro-text p {
+            font-size: 1.25rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar (Fixed) -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"  style="color: #d00606;
+            font-weight: bold;">
+                <img src="res/bafas-logo.jpg" alt="2TOCSOLUTIONS Logo">BAFAS PROJECT HUB LTD.
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto"  style="font-size: larger; font-weight: bold;">
+                    <li class="nav-item"><a class="nav-link">Home</a></li>
+                    <li class="nav-item"><a class="nav-link">About</a></li>
+                    <li class="nav-item"><a class="nav-link">Services</a></li>
+                    <li class="nav-item"><a class="nav-link">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background with sliding images -->
+    <div class="background">
+        <div class="background-images">
+            <img src="res/bafas-1.jpeg" alt="Background 1">
+            <img src="res/bafas-4.jpeg" alt="Background 2">
+            <img src="res/bafas-3.jpeg" alt="Background 3">
+            <img src="res/telecom_pics.jpeg" alt="Background 2">
+            <img src="res/telecommunications.jpg" alt="Background 4">
+            <img src="res/images.jpeg" alt="Background 5">
+            <img src="res/sddefault.jpg" alt="Background 6">
+        </div>
+        <div class="logo"></div>
+        <!-- New h1 and p tags below the logo (on top of sliding background) -->
+        <div class="intro-text">
+            <h1 style="text-transform: uppercase;">Welcome to bafas project hub</h1>
+            <p style="text-transform: capitalize;">we sustain and maintain the life of your technology.</p>
+        </div>
+    </div>
+<div class="backfield" style="background-color: rgb(210, 216, 228);">
+    <!-- Cards in a Row -->
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <!-- Software Solutions Card -->
+        <div class="col-md-4 col-sm-6 mb-4 mt-4">
+            <div class="card text-center h-100 shadow-lg d-flex flex-column">
+                <div class="card-body d-flex flex-column align-items-center justify-content-between">
+                    <!-- Software Icon -->
+                    <i class="fas fa-laptop-code card-icon" style="font-size: 4rem; color: #d00606;"></i>
+                    <h5 class="card-title mt-3" style="font-size: larger; font-weight: bold;">telecommunications maintenance & Service.</h5>
+                    <p class="card-text">A company that offers operations and maintenance (O&M) services, including contractual repairs, corrective, preventive</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Telecom VAS Card with New Icon -->
+        <div class="col-md-4 col-sm-6 mb-4 mt-4">
+            <div class="card text-center h-100 shadow-lg d-flex flex-column">
+                <div class="card-body d-flex flex-column align-items-center justify-content-between">
+                    <!-- New Font Awesome Telecom Icon -->
+                    <i class="fas fa-signal card-icon" style="font-size: 4rem; color: #d00606;"></i>
+                    <h5 class="card-title mt-3" style="font-size: larger; font-weight: bold;">Telecom Value-Added Services (VAS)</h5>
+                    <p class="card-text">We provide Value-Added Services (VAS), equipping our clients with the latest technology in the telecom industry.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Research and Development Card with Larger and Colorful Icon -->
+        <div class="col-md-4 col-sm-6 mb-4 mt-4">
+            <div class="card text-center h-100 shadow-lg d-flex flex-column">
+                <div class="card-body d-flex flex-column align-items-center justify-content-between">
+                    <!-- R&D Icon (Microscope) - Big & Colorful -->
+                    <i class="fas fa-microscope card-icon" style="font-size: 4rem; color: #d00606;"></i>
+                    <h5 class="card-title mt-3" style="font-size: larger; font-weight: bold;">Research and Development</h5>
+                    <p class="card-text">Our Team of expert researchers and developers are constantly innovating ideas and new ways of applying modern technology to solve societal challenges as well as client needs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Services Section -->
+<div class="container my-5 text-center">
+    <h2 class="mb-4" style="color: #151414;">Our Services</h2>
+    <ul class="list-unstyled">
+        <li class="mb-3"><i class="fas fa-check-circle" style="color: #d00606;"></i>telecommunication operations and maintenance (O&M) services</li>
+        <li class="mb-3"><i class="fas fa-check-circle" style="color: #d00606;"></i> Security Application Design, Development and Deployment.</li>
+        <li class="mb-3"><i class="fas fa-check-circle" style="color: #d00606;"></i> Artificial Intelligence. etc.</li>
+    </ul>
+</div>
+
+
+
+
+   <!-- Certification Section -->
+<div class="certification-section py-5 mt-3">
+    <h2 class="text-center mb-4" style="color: #151414;">We are Certified By:</h2>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto mt-3 mx-5">
+                <img src="res/client-2.png" alt="Certifier 2" class="img-fluid" style="max-width: 150px;">
+            </div>
+            <div class="col-auto mt-3 mx-5">
+                <img src="res/nitda.jpg" alt="Certifier 3" class="img-fluid" style="max-width: 150px;">
+            </div>
+            <div class="col-auto mt-3 mx-5">
+                <img src="res/client-3.png" alt="Certifier 3" class="img-fluid" style="max-width: 150px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Section with Header -->
+<div class="container my-5 mb-4">
+    <h1 class="text-center mb-4">Face of Bafas</h1>
+
+    <!-- Row for Three Cards -->
+    <div class="row justify-content-start">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg" style="height: 350px; background-color: #f8d7da;"> <!-- Reddish Background -->
+                <!-- Image at the top -->
+                <img src="res/oga-bash.jpg" class="card-img-top" alt="Service Image 1" style="height: 75%; object-fit: cover;">
+
+                <!-- Text content below the image -->
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <p><strong>ENG BASHIRU AJOSE</strong></p>
+                    <p>CEO</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg" style="height: 350px; background-color: #d1ecf1;"> <!-- Blueish Background -->
+                <!-- Image at the top -->
+                <img src="res/bj.jpg" class="card-img-top" alt="Service Image 2" style="height: 75%; object-fit: cover;">
+
+                <!-- Text content below the image -->
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <p><strong>Dr. BOLAJI OLORUNMAYE MEJABI</strong></p>
+                    <p>COO</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg" style="height: 350px; background-color: #82b24a;"> <!-- Blueish Background -->
+                <!-- Image at the top -->
+                <img src="res/oga-ango.jpg" class="card-img-top" alt="Service Image 2" style="height: 75%; object-fit: cover;">
+
+                <!-- Text content below the image -->
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <p><strong>ENG MUSTFA ANGO</strong></p>
+                    <p>GM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+<!-- Section with Header -->
+<div class="container my-5">
+    <h2 class="text-center mb-4" style="color: #3F9C13;">Our Partners</h2>
+
+    <!-- Logo Slider -->
+    <div id="logoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner d-flex align-items-center">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-around">
+                    <img src="res/client-32.png" class="img-fluid" alt="Logo 1" style="height: 100px;">
+                    <img src="res/client-36.png" class="img-fluid" alt="Logo 2" style="height: 100px;">
+                    <img src="res/client-37.png" class="img-fluid" alt="Logo 3" style="height: 100px;">
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="d-flex justify-content-around">
+                    <img src="res/client-38.png" class="img-fluid" alt="Logo 4" style="height: 100px;">
+                    <img src="res/client-39.png" class="img-fluid" alt="Logo 5" style="height: 100px;">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer Section -->
+<footer class="text-white py-5" style="background-color: #2c3e50;">
+    <div class="container">
+        <div class="row">
+            <!-- Logo and Name -->
+            <div class="col-md-4 mb-4 text-center text-md-start">
+                <img src="res/bafas-logo.jpg" alt="Company Logo" style="height: 50px;" class="mb-2">
+                <h5 class="mt-2">BAFAS PROJECT HUB LTD.</h5>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="col-md-4 mb-4 text-center">
+                <h5>Contact Us</h5>
+                <p>Email: <a href="info@2tocsolutions.com" class="text-white text-decoration-none">info@bafasbrojecthub.com</a></p>
+                <p>Call: <a href="tel:+1234567890" class="text-white text-decoration-none">+234 123 456 7890</a></p>
+                <p>Address:Abuja: sontally pharmacy, Aco Estate, Airport Road Abuja.</p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="col-md-4 mb-4 text-center text-md-end">
+                <h5>Follow Us</h5>
+                <a href="https://facebook.com" target="_blank" class="text-white mx-2"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
+                <a href="https://youtube.com" target="_blank" class="text-white mx-2"><i class="bi bi-youtube" style="font-size: 1.5rem;"></i></a>
+                <a href="https://instagram.com" target="_blank" class="text-white mx-2"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
+                <a href="https://twitter.com" target="_blank" class="text-white mx-2"><i class="bi bi-twitter" style="font-size: 1.5rem;"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="text-white mx-2"><i class="bi bi-linkedin" style="font-size: 1.5rem;"></i></a>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <hr class="border-light">
+
+        <div class="row align-items-center">
+            <!-- Copyright -->
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <p class="mb-0">&copy; 2025 Company Name. All rights reserved.</p>
+            </div>
+
+            <!-- Staff Login Button -->
+            <div class="col-md-6 text-center text-md-end">
+                <a href="/staff-login" class="btn btn-outline-light btn-sm">Staff Login</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Add Bootstrap Icons CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
